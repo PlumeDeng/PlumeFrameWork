@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="NewScenePanelSkin" minHeight="230" minWidth="450" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" height="377">
+    <e:Image left="0" right="0" bottom="0"  top="0" source="border_png" scale9Grid="2,2,12,12" />
+    <e:Group id="moveArea" left="0" right="0" top="0" height="45">
+        <e:Image left="0" right="0" bottom="0"  top="0" source="header_png"/>
+        <e:Label id="titleDisplay" size="20" fontFamily="Tahoma" textColor="0xFFFFFF"
+                 wordWrap="false" left="15" right="5" verticalCenter="0" text="新建场景" verticalAlign="middle" textAlign="center"/>
+    </e:Group>
+    <e:Button id="closeButton" label="取消" bottom="5" horizontalCenter="-77"/>
+	<e:Button id="sureButton" label="确定" bottom="5" horizontalCenter="85"/>
+	<e:Label text="场景ID" x="60" y="70" fontFamily="Microsoft YaHei" textColor="0x5b2f2f" size="24" textAlign="left"/>
+	<e:Label text="场景名称" x="60" y="110" fontFamily="Microsoft YaHei" textColor="0x5B2F2F" size="24" textAlign="left"/>
+	<e:Label text="场景宽度" x="60" y="150" fontFamily="Microsoft YaHei" textColor="0x5B2F2F" size="24" textAlign="left"/>
+	<e:Label text="场景高度" x="60" y="190" fontFamily="Microsoft YaHei" textColor="0x5B2F2F" size="24" textAlign="left"/>
+	<e:Label text="网格宽度" x="60" y="230" fontFamily="Microsoft YaHei" textColor="0x5B2F2F" size="24" textAlign="left"/>
+	<e:Label text="网格高度" x="60" y="270" fontFamily="Microsoft YaHei" textColor="0x5B2F2F" size="24" textAlign="left"/>
+	<e:TextInput id="inputID" width="200" height="30" x="210" y="70"/>
+	<e:TextInput id="inputName" width="200" height="30" x="210" y="110"/>
+	<e:TextInput id="inputWidth" width="200" height="30" x="210" y="150"/>
+	<e:TextInput id="inputHeight" width="200" height="30" x="210" y="190"/>
+	<e:TextInput id="inputGridWidth" width="200" height="30" x="210" y="230"/>
+	<e:TextInput id="inputGridHeight" width="200" height="30" x="210" y="270"/>
+
+	<w:Config id="1719d3043fa" ></w:Config>
+</e:Skin>

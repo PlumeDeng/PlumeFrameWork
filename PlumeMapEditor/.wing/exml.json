@@ -1,0 +1,15 @@
+{
+    "1719cb6f31c": {
+        "path": "editor\\MapEditor.ts",
+        "class": "MapEditor",
+        "parentPath": ""
+    },
+    "global": {
+        "globalAutoLayerMarkEnable": false
+    },
+    "1719d3043fa": {
+        "path": "editor\\panel\\NewScenePanel.ts",
+        "class": "NewScenePanel",
+        "parentPath": "resource/eui_skins/PanelSkin.exml"
+    }
+}

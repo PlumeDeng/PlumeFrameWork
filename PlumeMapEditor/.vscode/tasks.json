@@ -1,0 +1,45 @@
+{
+   "version": "2.0.0",
+   "command": "egret",
+   "type": "shell",
+   "tasks": [
+       {
+           "label": "build",
+           "presentation": {
+            "reveal": "always",
+            "panel": "new",
+            "echo": true
+           },
+           "args": [
+               "build",
+               "-sourcemap"
+           ],
+           "problemMatcher": "$tsc"
+       },
+       {
+           "label": "clean",
+           "presentation": {
+            "reveal": "always",
+            "panel": "new",
+            "echo": true
+           },
+           "args": [
+               "build",
+               "-e"
+           ],
+           "problemMatcher": "$tsc"
+       },
+       {
+           "label": "publish",
+           "presentation": {
+            "reveal": "always",
+            "panel": "new",
+            "echo": true
+           },
+           "args": [
+               "publish"
+           ],
+           "problemMatcher": "$tsc"
+       }
+   ]
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="MapEditorSkin" width="1920" height="1080" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
+	<w:Config id="1719cb6f31c" ></w:Config>
+	<e:Rect width="100%" height="100%" x="-1" y="0" strokeAlpha="0" fillColor="0xa5a0a0"/>
+	<e:Rect width="200" height="200" x="0" y="50" strokeAlpha="1" fillColor="0xA5A0A0" scaleX="1" scaleY="1" fillAlpha="0" strokeWeight="1" strokeColor="0x85e810"/>
+	<e:Rect width="200" height="830" x="0" y="250" strokeAlpha="1" fillColor="0xA5A0A0" scaleX="1" scaleY="1" fillAlpha="0" strokeWeight="1" strokeColor="0x1052d3"/>
+	<e:Rect width="1520" height="1030" x="200" y="50" strokeAlpha="1" fillColor="0xA5A0A0" scaleX="1" scaleY="1" fillAlpha="0" strokeWeight="1" strokeColor="0xe51010"/>
+	<e:Rect width="200" height="1030" x="1720" y="50" strokeAlpha="1" fillColor="0xA5A0A0" scaleX="1" scaleY="1" fillAlpha="0" strokeWeight="1" strokeColor="0x0697d6"/>
+	<e:Group id="headGroup" width="100%" height="50" x="0" y="0">
+		<e:Button id="btnNewScene" label="新建场景" x="50" y="25"/>
+		<e:Button id="btnImportScene" label="导入场景" x="60" y="35"/>
+		<e:Button id="btnImportMap" label="导入地图" x="60" y="35"/>
+		<e:Button id="btnEdit" label="编辑" x="50" y="50"/>
+		<e:Button id="btnTerrain" label="地形" x="20" y="20"/>
+		<e:Button id="btnBuilding" label="建筑" x="0" y="0"/>
+		<e:Button id="btnRole" label="角色" x="10" y="10"/>
+		<e:Button id="btnTree" label="树" x="30" y="30"/>
+		<e:Button id="btnWater" label="水" x="40" y="40"/>
+		<e:Button id="btnCut" label="地图切块" x="60" y="60"/>
+		<e:Button id="btnExport" label="导出json" x="70" y="70"/>
+		<e:layout>
+		<e:HorizontalLayout gap="0"/>
+		</e:layout>
+	</e:Group>
+	<e:Group id="leftUpGroup" x="0" y="50" width="200" height="200">
+		<e:Label id="labSceneName" text="名称：" x="5" y="10" fontFamily="Microsoft YaHei" size="18"/>
+		<e:Label id="labSceneWidth" text="宽度：0" x="5" y="40" fontFamily="Microsoft YaHei" size="18"/>
+		<e:Label id="labSceneHeight" text="高度：0" x="5" y="70" fontFamily="Microsoft YaHei" size="18"/>
+		<e:Label id="labGridWidth" text="网格宽度：0" x="5" y="100" fontFamily="Microsoft YaHei" size="18"/>
+		<e:Label id="labGridHeight" text="网格高度：0" x="5" y="130" fontFamily="Microsoft YaHei" size="18"/>
+	</e:Group>
+	<e:Scroller width="200" height="830" x="0" y="250">
+		<e:Group id="leftDownGroup">
+		</e:Group>
+	</e:Scroller>
+	<e:Scroller width="1520" height="1030" x="200" y="50">
+		<e:Group id="centerGroup">
+		</e:Group>
+	</e:Scroller>
+	<e:Scroller width="200" height="1030" x="1720" y="50">
+		<e:Group id="rightGroup">
+		</e:Group>
+	</e:Scroller>
+</e:Skin>
