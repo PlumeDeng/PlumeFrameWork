@@ -1,4 +1,4 @@
-class MapEditor extends eui.Component implements  eui.UIComponent {
+class MapEditor extends plume.BaseUIComponent implements plume.IScene {
 	//顶部菜单栏
 	private headGroup:eui.Group;
 	private btnNewScene:eui.Button;//新建场景
@@ -47,15 +47,21 @@ class MapEditor extends eui.Component implements  eui.UIComponent {
 	}
 
 	private init():void {
-		this.addEventListener(EditorEvent.createSceneComplete,this.onCreateSceneComplete,this,false);
+		this.addViewEventListenner(EditorEvent.createSceneComplete,this.onCreateSceneComplete,this);
 		this.btnNewScene.addEventListener(egret.TouchEvent.TOUCH_TAP,this.onBtnNewScene,this,false);
 	}
 
 	private onCreateSceneComplete(e:EditorEvent):void {
-		
+		let vo:plume.SceneVO = e.data;
+		this.labSceneName.text ="名称："+vo.name+"("+vo.id+")";
+		this.labSceneWidth.text = "宽度："+vo.width;
+		this.labSceneHeight.text = "高度："+vo.height;
+		this.labGridWidth.text = "网格宽度："+vo.gridWidth;
+		this.labGridHeight.text = "网格高度："+vo.gridHeight;
 	}
 
 	private onBtnNewScene(e:egret.TouchEvent):void {
+		plume.PanelManager.Instance<plume.PanelManager>(plume.PanelManager).openPanel();
 		let panel = new NewScenePanel();
 		panel.title = "新建场景";
 		this.addChild(panel);

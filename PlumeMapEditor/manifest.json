@@ -11,13 +11,24 @@
 		"libs/egretmgobe/egretmgobe.js"
 	],
 	"game": [
+		"bin-debug/engine/core/BaseUIComponent.js",
+		"bin-debug/engine/core/BasePanel.js",
+		"bin-debug/engine/core/BaseViewEvent.js",
+		"bin-debug/engine/core/BaseVO.js",
+		"bin-debug/engine/core/Singleton.js",
+		"bin-debug/editor/MapEditor.js",
+		"bin-debug/editor/event/EditorEvent.js",
+		"bin-debug/editor/panel/NewScenePanel.js",
 		"bin-debug/AssetAdapter.js",
 		"bin-debug/LoadingUI.js",
 		"bin-debug/Main.js",
 		"bin-debug/Platform.js",
+		"bin-debug/engine/core/EventManager.js",
+		"bin-debug/engine/core/IEvent.js",
+		"bin-debug/engine/core/IPanel.js",
+		"bin-debug/engine/core/IScene.js",
+		"bin-debug/engine/core/PanelManager.js",
 		"bin-debug/ThemeAdapter.js",
-		"bin-debug/editor/MapEditor.js",
-		"bin-debug/editor/event/EditorEvent.js",
-		"bin-debug/editor/panel/NewScenePanel.js"
+		"bin-debug/engine/vo/SceneVO.js"
 	]
 }
