@@ -1,4 +1,5 @@
 class NewScenePanel extends plume.BasePanel{
+	public static winName:string="NewScenePanel";
 	private inputID:eui.TextInput;
 	private inputName:eui.TextInput;
 	private inputWidth:eui.TextInput;
@@ -7,7 +8,7 @@ class NewScenePanel extends plume.BasePanel{
 	private inputGridHeight:eui.TextInput;
 	private sureButton:eui.Button;
 	public constructor() {
-		super("NewScenePanel");
+		super(NewScenePanel.winName);
 	}
 
 	protected partAdded(partName:string,instance:any):void
@@ -23,6 +24,7 @@ class NewScenePanel extends plume.BasePanel{
 	}
 	
 	private init():void {
+		this.title = "新建场景";
 		this.sureButton.addEventListener(egret.TouchEvent.TOUCH_TAP,this.OnSureButton,this,false);
 	}
 
@@ -47,6 +49,5 @@ class NewScenePanel extends plume.BasePanel{
 	public destroy():void {
 		super.destroy();
 		this.sureButton.removeEventListener(egret.TouchEvent.TOUCH_TAP,this.OnSureButton,this,false);
-		this.close();
 	}
 }

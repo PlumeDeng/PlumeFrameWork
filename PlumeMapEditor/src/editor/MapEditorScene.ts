@@ -1,4 +1,5 @@
-class MapEditor extends plume.BaseUIComponent implements plume.IScene {
+class MapEditorScene extends plume.BaseScene {
+	public static sceneName:string="MapEditorScene";
 	//顶部菜单栏
 	private headGroup:eui.Group;
 	private btnNewScene:eui.Button;//新建场景
@@ -61,12 +62,7 @@ class MapEditor extends plume.BaseUIComponent implements plume.IScene {
 	}
 
 	private onBtnNewScene(e:egret.TouchEvent):void {
-		plume.PanelManager.Instance<plume.PanelManager>(plume.PanelManager).openPanel();
-		let panel = new NewScenePanel();
-		panel.title = "新建场景";
-		this.addChild(panel);
-		panel.x = (this.width-panel.width)>>1;
-		panel.y = (this.height-panel.height)/3;
+		plume.PanelManager.Instance().openPanel(NewScenePanel.winName);
 	}
 	
 }

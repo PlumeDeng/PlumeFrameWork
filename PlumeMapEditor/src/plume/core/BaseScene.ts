@@ -1,0 +1,18 @@
+module plume {
+	export class BaseScene extends plume.BaseUIComponent implements plume.IScene{
+		public constructor() {
+			super();
+		}
+
+		public closeScene():void {
+			this.visible=false;
+		}
+
+		sceneData:any;
+
+		public showScene(data:any):void {
+			this.sceneData = data;
+			this.visible=true;
+		}
+	}
+}

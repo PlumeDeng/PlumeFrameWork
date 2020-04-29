@@ -51,7 +51,7 @@ class Main extends eui.UILayer {
         egret.registerImplementation("eui.IAssetAdapter", assetAdapter);
         egret.registerImplementation("eui.IThemeAdapter", new ThemeAdapter());
 
-
+        plume.PlumeEngine.Instance().initEngine(this);
         this.runGame().catch(e => {
             console.log(e);
         })
@@ -93,7 +93,6 @@ class Main extends eui.UILayer {
      * Create scene interface
      */
     protected createGameScene(): void {
-        let mapEditor = new MapEditor();
-        this.addChild(mapEditor);
+        plume.SceneManager.Instance().openScene(MapEditorScene.sceneName);
     }
 }

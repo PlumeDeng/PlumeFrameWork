@@ -4,6 +4,14 @@ namespace plume {
 			super();
 		}
 
+		close():void {
+			this.closePanel();
+		}
+
+		protected onCloseButtonClick(event: egret.TouchEvent): void {
+			this.closePanel();
+		}
+
 		public dispatchViewEvent(event:BaseViewEvent):void {
 			EventManager.Instance<EventManager>(EventManager).dispatchViewEvent(event);
 		}

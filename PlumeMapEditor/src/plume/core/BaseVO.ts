@@ -1,4 +1,7 @@
 namespace plume {
+	/**
+	 * 数据基类，提供json序列化接口
+	 */
 	export class BaseVO {
 		public constructor() {
 		}
