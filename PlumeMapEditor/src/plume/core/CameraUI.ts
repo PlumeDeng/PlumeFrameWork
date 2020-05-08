@@ -1,8 +1,9 @@
-module plume {
+namespace plume {
 	/**
 	 * 摄像机类，实现视角变化
 	 */
-	export class Camera {
+	export class CameraUI {
+		public static main:CameraUI;
 		/**摄像机显示的对象，实际是镜头所对应的世界*/
 		m_container: egret.DisplayObjectContainer;
 		/**摄像机位置X */
@@ -38,8 +39,8 @@ module plume {
 			this.m_cameraOffsetX = 0;
 			this.m_cameraOffsetY = 0;
 		}
-		/**初始化相机，绑定镜头 */
-		public init(container: egret.DisplayObjectContainer) {
+		/**设置镜头绑定对象 */
+		public setTarget(container: egret.DisplayObjectContainer) {
 			this.m_container = container;
 			this.m_zoomX = this.m_container.x;
 			this.m_zoomY = this.m_container.y;
@@ -113,9 +114,9 @@ module plume {
 		 * 摄像机移动，实际上是摄像机对应的容器反方向移动
 		*/
 		public CameraUpdate() {
+			if(this.m_container==null) return;
 			this.m_container.x -= this.m_cameraOffsetX;
 			this.m_container.y -= this.m_cameraOffsetY;
-
 		}
 	}
 }

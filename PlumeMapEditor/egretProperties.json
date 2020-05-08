@@ -31,6 +31,10 @@
     {
       "name": "egretmgobe",
       "path": "./libs/egretmgobe"
+    },
+    {
+      "name": "three",
+      "path": "./libs/three"
     }
   ]
 }

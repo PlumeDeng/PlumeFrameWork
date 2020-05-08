@@ -1,5 +1,6 @@
 namespace plume {
-	class PoolData{
+	class EventPoolData{
+		public eventType:string;
 		public thisTarget:any;
 		public callBack:Function;
 	}
@@ -15,7 +16,7 @@ namespace plume {
 			for(var type in pool){
 				if(type==event.type){
 					for(var index in pool[type]){
-						let poolData:PoolData = pool[type][index];
+						let poolData:EventPoolData = pool[type][index];
 						poolData.callBack.call(poolData.thisTarget,event);
 					}
 				}
@@ -24,8 +25,9 @@ namespace plume {
 
 		public addViewEventListenner(type:string,callBack:Function,thisTarget:any):void {
 			if(this._eventPool[type]==null) this._eventPool[type] = [];
-			let arr:Array<PoolData> = this._eventPool[type];
-			let poolData = new PoolData();
+			let arr:Array<EventPoolData> = this._eventPool[type];
+			let poolData = new EventPoolData();
+			poolData.eventType = type;
 			poolData.callBack = callBack;
 			poolData.thisTarget = thisTarget;
 			arr.push(poolData);
@@ -33,7 +35,7 @@ namespace plume {
 
 		public removeViewEventListenner(type:string,callBack:Function,thisTarget:any):void {
 			if(this._eventPool[type]==null) return;
-			let arr:Array<PoolData> = this._eventPool[type];
+			let arr:Array<EventPoolData> = this._eventPool[type];
 			let len = arr.length;
 			for(var i=0; i<len; i++){
 				if(arr[i].thisTarget==thisTarget&&arr[i].callBack==callBack){
@@ -46,7 +48,7 @@ namespace plume {
 		public removeAllViewEventListenners(thisTarget:any):void {
 			let pool = this._eventPool;
 			for(var type in pool){
-				let arr:Array<PoolData> = pool[type];
+				let arr:Array<EventPoolData> = pool[type];
 				let len = arr.length;
 				for(var i=0; i<len; i++){
 					if(arr[i].thisTarget==thisTarget){

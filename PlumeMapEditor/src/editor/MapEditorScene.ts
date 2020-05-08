@@ -1,4 +1,4 @@
-class MapEditorScene extends plume.BaseScene {
+class MapEditorScene extends plume.BaseUIScene {
 	public static sceneName:string="MapEditorScene";
 	//顶部菜单栏
 	private headGroup:eui.Group;
@@ -59,6 +59,11 @@ class MapEditorScene extends plume.BaseScene {
 		this.labSceneHeight.text = "高度："+vo.height;
 		this.labGridWidth.text = "网格宽度："+vo.gridWidth;
 		this.labGridHeight.text = "网格高度："+vo.gridHeight;
+		
+		let terrain = new plume.Terrain();
+		terrain.setData(vo);
+		this.centerGroup.addChild(terrain);
+		// plume.Camera.main.setTarget(terrain);
 	}
 
 	private onBtnNewScene(e:egret.TouchEvent):void {

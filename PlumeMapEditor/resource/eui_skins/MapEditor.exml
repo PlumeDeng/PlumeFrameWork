@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="MapEditorSkin" width="1920" height="1080" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" >
 	<w:Config id="1719cb6f31c" ></w:Config>
-	<e:Rect width="100%" height="100%" x="-1" y="0" strokeAlpha="0" fillColor="0xa5a0a0"/>
-	<e:Rect width="200" height="200" x="0" y="50" strokeAlpha="1" fillColor="0xA5A0A0" scaleX="1" scaleY="1" fillAlpha="0" strokeWeight="1" strokeColor="0x85e810"/>
-	<e:Rect width="200" height="830" x="0" y="250" strokeAlpha="1" fillColor="0xA5A0A0" scaleX="1" scaleY="1" fillAlpha="0" strokeWeight="1" strokeColor="0x1052d3"/>
-	<e:Rect width="1520" height="1030" x="200" y="50" strokeAlpha="1" fillColor="0xA5A0A0" scaleX="1" scaleY="1" fillAlpha="0" strokeWeight="1" strokeColor="0xe51010"/>
-	<e:Rect width="200" height="1030" x="1720" y="50" strokeAlpha="1" fillColor="0xA5A0A0" scaleX="1" scaleY="1" fillAlpha="0" strokeWeight="1" strokeColor="0x0697d6"/>
+	<e:Rect width="100%" height="50" x="0" y="0" strokeAlpha="0" fillColor="0xa5a0a0" fillAlpha="1"/>
+	<e:Rect width="200" height="200" x="0" y="50" strokeAlpha="1" fillColor="0xA5A0A0" scaleX="1" scaleY="1" fillAlpha="1" strokeWeight="1" strokeColor="0x85e810"/>
+	<e:Rect width="200" x="0" strokeAlpha="1" fillColor="0xA5A0A0" scaleX="1" scaleY="1" fillAlpha="1" strokeWeight="1" strokeColor="0x1052d3" bottom="0" top="250"/>
+	<e:Rect width="1520" x="200" strokeAlpha="1" fillColor="0xA5A0A0" scaleX="1" scaleY="1" fillAlpha="0" strokeWeight="1" strokeColor="0xe51010" top="50" bottom="0"/>
+	<e:Rect width="200" x="1720" strokeAlpha="1" fillColor="0xA5A0A0" scaleX="1" scaleY="1" fillAlpha="1" strokeWeight="1" strokeColor="0x0697d6" bottom="0" top="50"/>
 	<e:Group id="headGroup" width="100%" height="50" x="0" y="0">
 		<e:Button id="btnNewScene" label="新建场景" x="50" y="25"/>
 		<e:Button id="btnImportScene" label="导入场景" x="60" y="35"/>
@@ -29,15 +29,15 @@
 		<e:Label id="labGridWidth" text="网格宽度：0" x="5" y="100" fontFamily="Microsoft YaHei" size="18"/>
 		<e:Label id="labGridHeight" text="网格高度：0" x="5" y="130" fontFamily="Microsoft YaHei" size="18"/>
 	</e:Group>
-	<e:Scroller width="200" height="830" x="0" y="250">
+	<e:Scroller width="200" x="0" top="250" bottom="0">
 		<e:Group id="leftDownGroup">
 		</e:Group>
 	</e:Scroller>
-	<e:Scroller width="1520" height="1030" x="200" y="50">
+	<e:Scroller width="1520" x="200" top="50" bottom="0">
 		<e:Group id="centerGroup">
 		</e:Group>
 	</e:Scroller>
-	<e:Scroller width="200" height="1030" x="1720" y="50">
+	<e:Scroller width="200" x="1720" top="50" bottom="0">
 		<e:Group id="rightGroup">
 		</e:Group>
 	</e:Scroller>

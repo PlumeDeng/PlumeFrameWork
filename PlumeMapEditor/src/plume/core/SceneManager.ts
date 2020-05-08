@@ -1,4 +1,4 @@
-module plume {
+namespace plume {
 	export class SceneManager {
 		private static instance:SceneManager=null;
 		public static Instance():SceneManager {
@@ -14,22 +14,24 @@ module plume {
 
 		public init(group:egret.DisplayObjectContainer):void {
 			this.sceneGroup = group;
+			CameraUI.main = new CameraUI(0,0,GlobalUtil.stage.stageWidth,GlobalUtil.stage.stageHeight);
 		}
-
-		public openScene(sceneName:string,data:any=null):void {
+		
+		public openUIScene(sceneName:string,data:any=null):void {
 			if(this.sceneGroup==null){
 				LogUtil.log("场景管理器尚未初始化");
 				return;
 			}
-			let scene:BaseScene = this.scenePool[sceneName];
+			let scene:BaseUIScene = this.scenePool[sceneName];
 			if(scene==null){
-				scene = this.createScene(sceneName);
+				scene = this.createUIScene(sceneName);
 				this.sceneGroup.addChild(scene);
+				scene.height = plume.GlobalUtil.stage.stageHeight;
 			}
 			scene.showScene(data);
 		}
 
-		private createScene(sceneName:string):BaseScene{
+		private createUIScene(sceneName:string):BaseUIScene{
 			let Class = egret.getDefinitionByName(sceneName);
 			let scene = new Class();
 			this.scenePool[sceneName] = scene;

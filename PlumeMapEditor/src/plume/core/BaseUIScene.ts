@@ -1,5 +1,5 @@
 module plume {
-	export class BaseScene extends plume.BaseUIComponent implements plume.IScene{
+	export class BaseUIScene extends plume.BaseUIComponent implements plume.IScene{
 		public constructor() {
 			super();
 		}
